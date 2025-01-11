@@ -12,7 +12,7 @@ const Login = () => {
  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
    e.preventDefault();
    try {
-     const response = await axios.post('http://localhost:8000/api/user/login', {
+     const response = await axios.post('https://url-short-backend-kdq7.onrender.com/api/user/login', {
        email,
        password
      });

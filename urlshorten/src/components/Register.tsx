@@ -20,7 +20,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/user/register",
+        "https://url-short-backend-kdq7.onrender.com/api/user/register",
         {
           fullName,
           email,

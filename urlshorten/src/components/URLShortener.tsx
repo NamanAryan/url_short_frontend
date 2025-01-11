@@ -31,7 +31,7 @@ const URLShortener = () => {
   const fetchUrls = async () => {
     try {
       console.log("Fetching URLs...");
-      const response = await axios.get("http://localhost:8000/api/url/urls", {
+      const response = await axios.get("https://url-short-backend-kdq7.onrender.com/api/url/urls", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -49,7 +49,7 @@ const URLShortener = () => {
     try {
       console.log("Sending URL:", url);
       const response = await axios.post(
-        "http://localhost:8000/api/url/shorten",
+        "https://url-short-backend-kdq7.onrender.com/api/url/shorten",
         { url: url },
         {
           headers: {
@@ -68,7 +68,7 @@ const URLShortener = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:8000/api/url/${id}`, {
+      await axios.delete(`https://url-short-backend-kdq7.onrender.com/api/url/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -165,9 +165,9 @@ const URLShortener = () => {
                     <a
                       className="text-blue-400 hover:text-blue-300 transition duration-200"
                       target="_blank"
-                      href={`http://localhost:8000/${urlItem.shortUrl}`}
+                      href={`https://url-short-backend-kdq7.onrender.com/${urlItem.shortUrl}`}
                     >
-                      {`http://localhost:8000/${urlItem.shortUrl}`}
+                      {`https://url-short-backend-kdq7.onrender.com/${urlItem.shortUrl}`}
                     </a>
                   </p>
                 </div>
